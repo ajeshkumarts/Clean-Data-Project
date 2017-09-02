@@ -1,12 +1,93 @@
-## About the Raw Data
-The features (561 of them) are unlabeled and can be found in the x_test.txt. The activity labels are in the y_test.txt file. The test subjects are in the subject_test.txt file. The same holds for the training set
-## About the script and the tidy dataset
-A script is created called run_analysis.R which will merge the test and training sets together. Prerequisites for this script:
+# Tidy data set description
 
-the UCI HAR Dataset must be extracted and..
-the UCI HAR Dataset must be availble in a directory called "UCI HAR Dataset"
-After merging testing and training, labels are added and only columns that have to do with mean and standard deviation are kept.
+## The variables in the tidy data
 
-Lastly, the script will create a tidy data set containing the means of all the columns per test subject and per activity. This tidy dataset will be written to a tab-delimited file called tidy.txt, which can also be found in this repository
-## About the Code Book
-The CodeBook.md file explains the transformations performed and the resulting data and variables.
+Tidy data contains 180 rows and 68 columns. Each row has averaged variables for each subject and each activity.
+
+Only all the variables estimated from mean and standard deviation in the tidy set were kept.
+
+mean(): Mean value
+std(): Standard deviation
+The data were averaged based on subject and activity group.
+
+## Subject column is numbered sequentially from 1 to 30. Activity column has 6 types as listed below.
+
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+## The tidy data contains 6 rows (averaged based on activity) and 68 columns (66 variables and activity labels).
+
+"activitylabel"
+"subject"
+"tBodyAcc-mean()-X"
+"tBodyAcc-mean()-Y"
+"tBodyAcc-mean()-Z"
+"tBodyAcc-std()-X"
+"tBodyAcc-std()-Y"
+"tBodyAcc-std()-Z"
+"tGravityAcc-mean()-X"
+"tGravityAcc-mean()-Y"
+"tGravityAcc-mean()-Z"
+"tGravityAcc-std()-X"
+"tGravityAcc-std()-Y"
+"tGravityAcc-std()-Z"
+"tBodyAccJerk-mean()-X"
+"tBodyAccJerk-mean()-Y"
+"tBodyAccJerk-mean()-Z"
+"tBodyAccJerk-std()-X"
+"tBodyAccJerk-std()-Y"
+"tBodyAccJerk-std()-Z"
+"tBodyGyro-mean()-X"
+"tBodyGyro-mean()-Y"
+"tBodyGyro-mean()-Z"
+"tBodyGyro-std()-X"
+"tBodyGyro-std()-Y"
+"tBodyGyro-std()-Z"
+"tBodyGyroJerk-mean()-X"
+"tBodyGyroJerk-mean()-Y"
+"tBodyGyroJerk-mean()-Z"
+"tBodyGyroJerk-std()-X"
+"tBodyGyroJerk-std()-Y"
+"tBodyGyroJerk-std()-Z"
+"tBodyAccMag-mean()"
+"tBodyAccMag-std()"
+"tGravityAccMag-mean()"
+"tGravityAccMag-std()"
+"tBodyAccJerkMag-mean()"
+"tBodyAccJerkMag-std()"
+"tBodyGyroMag-mean()"
+"tBodyGyroMag-std()"
+"tBodyGyroJerkMag-mean()"
+"tBodyGyroJerkMag-std()"
+"fBodyAcc-mean()-X"
+"fBodyAcc-mean()-Y"
+"fBodyAcc-mean()-Z"
+"fBodyAcc-std()-X"
+"fBodyAcc-std()-Y"
+"fBodyAcc-std()-Z"
+"fBodyAccJerk-mean()-X"
+"fBodyAccJerk-mean()-Y"
+"fBodyAccJerk-mean()-Z"
+"fBodyAccJerk-std()-X"
+"fBodyAccJerk-std()-Y"
+"fBodyAccJerk-std()-Z"
+"fBodyGyro-mean()-X"
+"fBodyGyro-mean()-Y"
+"fBodyGyro-mean()-Z"
+"fBodyGyro-std()-X"
+"fBodyGyro-std()-Y"
+"fBodyGyro-std()-Z"
+"fBodyAccMag-mean()"
+"fBodyAccMag-std()"
+"fBodyBodyAccJerkMag-mean()"
+"fBodyBodyAccJerkMag-std()"
+"fBodyBodyGyroMag-mean()"
+"fBodyBodyGyroMag-std()"
+"fBodyBodyGyroJerkMag-mean()"
+"fBodyBodyGyroJerkMag-std()"
+## variable units
+
+Activity variable is factor type. Subject variable is integer type. All the other variables are numeric type.
